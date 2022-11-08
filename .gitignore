@@ -1,8 +1,8 @@
 # Dependency directories
 node_modules/
 
-#Sensitive stuff
+# Sensitive stuff
 config.json
 
-#intellij
+# intellij
 .idea/

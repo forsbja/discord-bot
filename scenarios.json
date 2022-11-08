@@ -1,0 +1,22 @@
+[
+	{
+		"lore": "First",
+		"choices": ["Left","Straight","DEATH"],
+		"nextScenario": [1,2,3]
+	},
+	{
+		"lore": "First-Left",
+		"choices": ["26", "twenty-six", "twenty six", "twentysix"],
+		"nextScenario": [3,4,5]
+	},
+	{
+		"lore": "First-Right",
+		"choices": ["26", "twenty-six", "twenty six", "twentysix"],
+		"nextScenario": [6,7,8]
+	},
+	{
+		"lore": "DEATH",
+		"choices": [""],
+		"nextScenario": []
+	}
+]
