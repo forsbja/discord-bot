@@ -1,22 +1,58 @@
 [
+	{	
+		"index": 0,
+		"lore": "You wake up in a strange horse-drawn cart. There is a guard driving the cart and the only other passenger is a clown.",
+		"picture": " ",
+		"choices": ["Jump off the back of the cart","Talk to the clown","Talk to the guard"],
+		"choiceTransition": ["You jump off the cart and roll until you finally come to rest in a forest well off the path.",
+							 "You have a nice conversation with the clown.",
+							 "The guard tells you to shut up."],
+		"nextScenario": [1,2,2],
+		"death": false
+	},
 	{
-		"lore": "First",
+		"index": 1,
+		"lore": "You can hear voices and other noises coming from beyond the trees.",
+		"picture": " ",
+		"choices": ["Investigate the noises","Cower in your current spot","Find your way back to the path and follow the cart tracks"],
+		"choiceTransition": ["You decide to investigate all the strange noises.",
+							 "You decide nothing good can come out of chasing down scary noises and stay put.",
+							 "Regretting your choices you decide to work your way back and follow the tracks left by the cart. However, now you have to walk. Nice one."
+		],
+		"nextScenario": [2,3],
+		"death": false
+	},
+	{
+		"index": 2,
+		"lore": "You find a bandit camp filled with all sorts of scary looking people.",
+		"picture": " ",
 		"choices": ["Left","Straight","DEATH"],
-		"nextScenario": [1,2,3]
+		"choiceTransition": [
+
+		],
+		"nextScenario": [],
+		"death": false
 	},
 	{
-		"lore": "First-Left",
-		"choices": ["26", "twenty-six", "twenty six", "twentysix"],
-		"nextScenario": [3,4,5]
+		"index": 3,
+		"lore": "Since you were unwilling to go to the noises, the noises decided to come to you in the form of an angry bandit who promptly skewers you for your cowardice.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [
+
+		],
+		"nextScenario": [],
+		"death": true
 	},
 	{
-		"lore": "First-Right",
-		"choices": ["26", "twenty-six", "twenty six", "twentysix"],
-		"nextScenario": [6,7,8]
-	},
-	{
-		"lore": "DEATH",
-		"choices": [""],
-		"nextScenario": []
+		"index": 4,
+		"lore": "",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [
+
+		],
+		"nextScenario": [],
+		"death": true
 	}
 ]
