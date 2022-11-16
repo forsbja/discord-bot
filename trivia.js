@@ -8,8 +8,10 @@ module.exports = {
           if(message.author.bot){return;}
 
           //Initialize Vars
+            //Grab 10 random questions from a trivia api
             const response = await fetch('https://opentdb.com/api.php?amount=10');
             const data = await response.json();
+            //Logic for grabbing a random question and mapping it to specific choices
             var length = data.results.length;
             var randomNumber = Math.floor(Math.random() * length);
             var randomQuestion = data.results[randomNumber];
@@ -89,23 +91,26 @@ module.exports = {
 
           //Return if the user got the question right
           if(correct){
-            currChannel.send("Correct!");
+            currChannel.send("Correct " + ans.author.username + "!");
           }else{
-            currChannel.send("Incorrect, the answer was: " + correctAnswer);
+            currChannel.send("Incorrect "+ ans.author.username +", the answer was: " + correctAnswer);
           }
     }
     
 }
 
 function decodeEntities(encodedString) {
-  var translate_re = /&(nbsp|amp|quot|lt|gt);/g;
+  var translate_re = /&(nbsp|amp|quot|lt|gt|#039|ouml|eacute|rsquo);/g;
   var translate = {
       "nbsp":" ",
       "amp" : "&",
       "quot": "\"",
       "lt"  : "<",
       "gt"  : ">",
-      "eacute": "é"
+      "eacute": "é",
+      "#039": "'",
+      "ouml": "ö",
+      "rsquo": "'"
   };
   return encodedString.replace(translate_re, function(match, entity) {
       return translate[entity];
