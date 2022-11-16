@@ -2,6 +2,7 @@ const { Client, Events, GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
 const trivia = require("./trivia.js")
 const rps = require('./rps');
+const adventure = require('./adventure');
 
 
 const client = new Client({
@@ -24,7 +25,7 @@ client.once('ready', () => {
 
 client.on("messageCreate", (message) => {
     message.content = message.content.toLowerCase();
-    if(message.content.startsWith("!")){
+    if(message.content.startsWith("!") && (!message.author.bot)){
       switch (message.content){
         case "!help":
           message.channel.send("Nuts Help!\nUse ! followed by the number for more information\n1: !help\nTBD\nTBD");
@@ -39,17 +40,25 @@ client.on("messageCreate", (message) => {
         case "!trivia":
           trivia.startGame(message);
           break;
+        case "!adventure":
+          adventure.startAdventure(message, 0);
+          break;
         default:
           message.channel.send("Command not recognized");
       }
     }
 
 
-
-
-
-  if(message.content === "nuts"){
-    message.channel.send("I got the nuts !");
+    
+  if(message.content.includes("nuts") && !message.author.bot){
+    var randomNumber = Math.floor(Math.random() * 50);
+    if(randomNumber == 21){
+      message.channel.send("Good work "+ message.author.username + " !");
+      message.channel.send({ files: [{ attachment: 'images\\rare-nuts.png' }] });
+    }else{
+      message.channel.send(message.author.username +" got the nuts !");
+    }
   }
+
 });
 
