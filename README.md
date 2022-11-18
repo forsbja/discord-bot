@@ -4,4 +4,5 @@ To use this bot clone the repository. Then create a new bot on the discord devel
 
 ## Supported Commands
 !help ~ lists all current commands with a description <br>
-!trivia ~ asks you a trivia question
+!trivia ~ asks you a trivia question <br>
+!adventure ~ Creates an rpg game with multiple endings <br>
