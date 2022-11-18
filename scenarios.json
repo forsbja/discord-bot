@@ -4,10 +4,12 @@
 		"lore": "You wake up in a strange horse-drawn cart. There is a guard driving the cart and the only other passenger is a clown.",
 		"picture": " ",
 		"choices": ["Jump off the back of the cart","Talk to the clown","Talk to the guard"],
-		"choiceTransition": ["You jump off the cart and roll until you finally come to rest in a forest well off the path.",
+		"choiceTransition": [
+							 "You jump off the cart and roll until you finally come to rest in a forest well off the path.",
 							 "You have a nice conversation with the clown.",
-							 "The guard tells you to shut up."],
-		"nextScenario": [1,2,2],
+							 "The guard tells you to shut up."
+							],
+		"nextScenario": [1,-1,-1],
 		"death": false
 	},
 	{
@@ -15,11 +17,12 @@
 		"lore": "You can hear voices and other noises coming from beyond the trees.",
 		"picture": " ",
 		"choices": ["Investigate the noises","Cower in your current spot","Find your way back to the path and follow the cart tracks"],
-		"choiceTransition": ["You decide to investigate all the strange noises.",
+		"choiceTransition": [
+							 "You decide to investigate all the strange noises.",
 							 "You decide nothing good can come out of chasing down scary noises and stay put.",
 							 "Regretting your choices you decide to work your way back and follow the tracks left by the cart. However, now you have to walk. Nice one."
-		],
-		"nextScenario": [2,3],
+							],
+		"nextScenario": [2,3,-1],
 		"death": false
 	},
 	{
@@ -28,9 +31,11 @@
 		"picture": " ",
 		"choices": ["Left","Straight","DEATH"],
 		"choiceTransition": [
-
-		],
-		"nextScenario": [],
+							 "",
+							 "",
+							 ""
+							],
+		"nextScenario": [-1,-1,-1],
 		"death": false
 	},
 	{
@@ -38,21 +43,56 @@
 		"lore": "Since you were unwilling to go to the noises, the noises decided to come to you in the form of an angry bandit who promptly skewers you for your cowardice.",
 		"picture": " ",
 		"choices": [],
-		"choiceTransition": [
-
-		],
+		"choiceTransition": [],
 		"nextScenario": [],
 		"death": true
 	},
 	{
 		"index": 4,
-		"lore": "",
+		"lore": "You arrive at the cart's destination, the king of the land's glorious castle. You are brought before him and he delivers an ultimatum. \"Paint my fence or you shall never see the light of day again\" he cries!",
 		"picture": " ",
-		"choices": [],
+		"choices": ["Accept his offer and paint his fence","Refuse to paint the fence","Decide nothing matters and attempt to kill the king"],
 		"choiceTransition": [
-
-		],
+							 "The king brings you to his horrendously flaking fence. \"Make this fence fit for a king,\" he exclaims skipping away.",
+							 "You refuse. The king, as they usually do, takes offense to this and you are promptly thrown in the dungeon.",
+							 "Lacking more than a few brain cells you decide to rush the king with nothing more than your bare hands. Incredibly, the king is terrified and has a heart attack on the spot. As you \"bested\" the king in combat, the guards declare you the new king."
+		   					],
+		"nextScenario": [-1,5,6],
+		"death": false
+	},
+	{
+		"index": 5,
+		"lore": "You are unceremoniously thrown into a cell. Luckily for you there's a nice a capella group imprisoned in the cell next you, and you drop the mic on life among friends.",
+		"picture": " ",
+		"choices": ["","",""],
+		"choiceTransition": [],
 		"nextScenario": [],
 		"death": true
+	},
+	{
+		"index": -1,
+		"lore": "",
+		"picture": " ",
+		"choices": ["","",""],
+		"choiceTransition": [
+							 "",
+							 "",
+							 ""
+		   					],
+		"nextScenario": [],
+		"death": false
+	},
+	{
+		"index": -1,
+		"lore": "You gaze upon a scary looking house. A monster house if you will. You feel a strange pull towards it and begin to look for ways inside.",
+		"picture": " ",
+		"choices": ["Try the front door","Climb in through a window","Santa Style through the chimney"],
+		"choiceTransition": [
+							 "",
+							 "",
+							 ""
+		   					],
+		"nextScenario": [],
+		"death": false
 	}
 ]
