@@ -6,10 +6,10 @@
 		"choices": ["Jump off the back of the cart","Talk to the clown","Talk to the guard"],
 		"choiceTransition": [
 							 "You jump off the cart and roll until you finally come to rest in a forest well off the path.",
-							 "You have a nice conversation with the clown.",
-							 "The guard tells you to shut up."
+							 "You have a nice conversation with the clown. Near the end of your journey he honks his horn and disappears. Weird.",
+							 "The guard tells you to shut up. Typical guard mentality."
 							],
-		"nextScenario": [1,-1,-1],
+		"nextScenario": [1,4,4],
 		"death": false
 	},
 	{
@@ -22,20 +22,20 @@
 							 "You decide nothing good can come out of chasing down scary noises and stay put.",
 							 "Regretting your choices you decide to work your way back and follow the tracks left by the cart. However, now you have to walk. Nice one."
 							],
-		"nextScenario": [2,3,-1],
+		"nextScenario": [2,3,4],
 		"death": false
 	},
 	{
 		"index": 2,
 		"lore": "You find a bandit camp filled with all sorts of scary looking people.",
 		"picture": " ",
-		"choices": ["Left","Straight","DEATH"],
+		"choices": ["CHARGE!","Run away","Try and blend in"],
 		"choiceTransition": [
-							 "",
-							 "",
-							 ""
+							 "You make a laughable attempt of a cavalry charge. Not surprising given your lack of a horse, armor, weapons, or anything knightly. The bandits knock you out easily and you wake up in a new place.",
+							 "You turn to try and run but end up tripping and landing on some pots and pans creating a clatter. The bandits easily take you prisoner and leave you in a strange place.",
+							 "You attempt to blend in. It fails. They bonk you on the head and you wake up in a strange new place."
 							],
-		"nextScenario": [-1,-1,-1],
+		"nextScenario": [14,14,14],
 		"death": false
 	},
 	{
@@ -53,37 +53,112 @@
 		"picture": " ",
 		"choices": ["Accept his offer and paint his fence","Refuse to paint the fence","Decide nothing matters and attempt to kill the king"],
 		"choiceTransition": [
-							 "The king brings you to his horrendously flaking fence. \"Make this fence fit for a king,\" he exclaims skipping away.",
+							 "The king brings you to his horrendously flaking fence. \"Make this fence fit for a king,\" he exclaims skipping daintily away.",
 							 "You refuse. The king, as they usually do, takes offense to this and you are promptly thrown in the dungeon.",
 							 "Lacking more than a few brain cells you decide to rush the king with nothing more than your bare hands. Incredibly, the king is terrified and has a heart attack on the spot. As you \"bested\" the king in combat, the guards declare you the new king."
 		   					],
-		"nextScenario": [-1,5,6],
+		"nextScenario": [9,5,6],
 		"death": false
 	},
 	{
 		"index": 5,
 		"lore": "You are unceremoniously thrown into a cell. Luckily for you there's a nice a capella group imprisoned in the cell next you, and you drop the mic on life among friends.",
 		"picture": " ",
-		"choices": ["","",""],
+		"choices": [],
 		"choiceTransition": [],
 		"nextScenario": [],
 		"death": true
 	},
 	{
-		"index": -1,
-		"lore": "",
+		"index": 6,
+		"lore": "As the new king, you must address your people. As you gaze upon your new subjects you desperately think of ways to play off the murder(?) of the king.",
 		"picture": " ",
-		"choices": ["","",""],
+		"choices": ["Try and use the king's death as a show of force","Try and focus on new changes that would benefit the people","Say you just didn't like him lmao"],
 		"choiceTransition": [
-							 "",
-							 "",
-							 ""
+							 "You give a very threatening speech with plenty of nods towards the fact that you just killed their king sprinkle throughout.",
+							 "You give an upbeat speech trying to convince them of how great life will be and what a utopia you will build. However, they view this as just an attempt to cozy up to them and decide to throw you in jail.",
+							 "Gazing upon the crowd, you decide honesty is the best policy. \"I just thought he sucked\" you explain to the crowd."
 		   					],
-		"nextScenario": [],
+		"nextScenario": [7,5,8],
 		"death": false
 	},
 	{
-		"index": -1,
+		"index": 7,
+		"lore": "Since you painted yourself as such a big powerful man, a few of your subjects decide to challenge you. Unfortunately, they do not have heart attacks and end up ending your reign almost as fast as you got it.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
+		"nextScenario": [],
+		"death": true
+	},
+	{
+		"index": 8,
+		"lore": "The crowd, surprisingly, agrees. They decide you would be a massive upgrade and leave you as the supreme emperor of the known universe.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
+		"nextScenario": [],
+		"death": true
+	},
+	{
+		"index": 9,
+		"lore": "True to your word, you begin painting the fence. However you notice a strange staircase leading to the sky and an unguarded path just past the fence.",
+		"picture": " ",
+		"choices": ["Continue to paint the fence.","Climb the stairway","Run to the Hills"],
+		"choiceTransition": [
+							 "You continue to paint the fence.",
+							 "You begin to climb the staircase.",
+							 "You run for the path. Absolutely no one tries to stop you. After like five minutes of running you need a break and stop near a strange structure."
+		   					],
+		"nextScenario": [10,13,14],
+		"death": false
+	},
+	{
+		"index": 10,
+		"lore": "Taking a break you review your options. Notably those that are not painting a fence.",
+		"picture": " ",
+		"choices": ["Continue to paint the fence.","Climb the stairway","Run to the Hills"],
+		"choiceTransition": [
+							 "You continue to paint the fence.",
+							 "You begin to climb the staircase.",
+							 "You run for the path. Absolutely no one tries to stop you. After like five minutes of running you need a break and stop near a strange structure."
+		   					],
+		"nextScenario": [11,13,14],
+		"death": false
+	},
+	{
+		"index": 11,
+		"lore": "Why am I doing this to myself, you wonder staring longingly at the two methods for to escape the purgatory that is preventative maintenance.",
+		"picture": " ",
+		"choices": ["Continue to paint the fence.","Climb the stairway","Run to the Hills"],
+		"choiceTransition": [
+							 "You continue to paint the fence.",
+							 "You begin to climb the staircase.",
+							 "You run for the path. Absolutely no one tries to stop you. After like five minutes of running you need a break and stop near a strange structure."
+		   					],
+		"nextScenario": [12,13,14],
+		"death": false
+	},
+	{
+		"index": 12,
+		"lore": "After hours of painting the fence looks truly beautiful. The king, told of your success, drops to his knees at the sight. \"You deserve this more than I!\" he proclaims handing you his crown and promptly climbing the stairway to heaven.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
+		"nextScenario": [],
+		"death": true
+	},
+	{
+		"index": 13,
+		"lore": "You climb the Stairway to Heaven. You do make it, but you do actually end up dying. Who could have seen that coming?",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
+		"nextScenario": [],
+		"death": true
+	},
+	{
+		"index": 14,
 		"lore": "You gaze upon a scary looking house. A monster house if you will. You feel a strange pull towards it and begin to look for ways inside.",
 		"picture": " ",
 		"choices": ["Try the front door","Climb in through a window","Santa Style through the chimney"],

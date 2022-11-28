@@ -47,18 +47,5 @@ client.on("messageCreate", (message) => {
           message.channel.send("Command not recognized");
       }
     }
-
-
-    
-  if(message.content.includes("nuts") && !message.author.bot){
-    var randomNumber = Math.floor(Math.random() * 50);
-    if(randomNumber == 21){
-      message.channel.send("Good work "+ message.author.username + " !");
-      message.channel.send({ files: [{ attachment: 'images\\rare-nuts.png' }] });
-    }else{
-      message.channel.send(message.author.username +" got the nuts !");
-    }
-  }
-
 });
 
