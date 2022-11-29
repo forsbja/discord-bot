@@ -45,8 +45,9 @@ module.exports = {
             choices = await currScenario.choices;
 
             //Check to see if they chose poorly, exit the game if true
-            if(currScenario.death){
+            if(currScenario.ending){
                 currChannel.send(transPrompt + " " + currScenario.lore);
+                currChannel.send("Your adventure has ended.");
                 return;
             }
 
@@ -70,6 +71,6 @@ module.exports = {
  * @returns 
  */
 function formPrompt(lore, choices){
-    let scenarioPrompt = lore + "\n1: "+choices[0]+"\n2: "+choices[1]+"\n3: "+choices[2];
+    let scenarioPrompt = lore + "\n\nDo you..." + "\n1: "+choices[0]+"\n2: "+choices[1]+"\n3: "+choices[2];
     return scenarioPrompt;
 }
