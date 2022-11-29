@@ -10,7 +10,7 @@
 							 "The guard tells you to shut up. Typical guard mentality."
 							],
 		"nextScenario": [1,4,4],
-		"death": false
+		"ending": false
 	},
 	{
 		"index": 1,
@@ -23,7 +23,7 @@
 							 "Regretting your choices you decide to work your way back and follow the tracks left by the cart. However, now you have to walk. Nice one."
 							],
 		"nextScenario": [2,3,4],
-		"death": false
+		"ending": false
 	},
 	{
 		"index": 2,
@@ -36,7 +36,7 @@
 							 "You attempt to blend in. It fails. They bonk you on the head and you wake up in a strange new place."
 							],
 		"nextScenario": [14,14,14],
-		"death": false
+		"ending": false
 	},
 	{
 		"index": 3,
@@ -45,7 +45,7 @@
 		"choices": [],
 		"choiceTransition": [],
 		"nextScenario": [],
-		"death": true
+		"ending": true
 	},
 	{
 		"index": 4,
@@ -58,7 +58,7 @@
 							 "Lacking more than a few brain cells you decide to rush the king with nothing more than your bare hands. Incredibly, the king is terrified and has a heart attack on the spot. As you \"bested\" the king in combat, the guards declare you the new king."
 		   					],
 		"nextScenario": [9,5,6],
-		"death": false
+		"ending": false
 	},
 	{
 		"index": 5,
@@ -67,20 +67,20 @@
 		"choices": [],
 		"choiceTransition": [],
 		"nextScenario": [],
-		"death": true
+		"ending": true
 	},
 	{
 		"index": 6,
 		"lore": "As the new king, you must address your people. As you gaze upon your new subjects you desperately think of ways to play off the murder(?) of the king.",
 		"picture": " ",
-		"choices": ["Try and use the king's death as a show of force","Try and focus on new changes that would benefit the people","Say you just didn't like him lmao"],
+		"choices": ["Try and use the king's ending as a show of force","Try and focus on new changes that would benefit the people","Say you just didn't like him lmao"],
 		"choiceTransition": [
 							 "You give a very threatening speech with plenty of nods towards the fact that you just killed their king sprinkle throughout.",
 							 "You give an upbeat speech trying to convince them of how great life will be and what a utopia you will build. However, they view this as just an attempt to cozy up to them and decide to throw you in jail.",
 							 "Gazing upon the crowd, you decide honesty is the best policy. \"I just thought he sucked\" you explain to the crowd."
 		   					],
 		"nextScenario": [7,5,8],
-		"death": false
+		"ending": false
 	},
 	{
 		"index": 7,
@@ -89,7 +89,7 @@
 		"choices": [],
 		"choiceTransition": [],
 		"nextScenario": [],
-		"death": true
+		"ending": true
 	},
 	{
 		"index": 8,
@@ -98,7 +98,7 @@
 		"choices": [],
 		"choiceTransition": [],
 		"nextScenario": [],
-		"death": true
+		"ending": true
 	},
 	{
 		"index": 9,
@@ -111,7 +111,7 @@
 							 "You run for the path. Absolutely no one tries to stop you. After like five minutes of running you need a break and stop near a strange structure."
 		   					],
 		"nextScenario": [10,13,14],
-		"death": false
+		"ending": false
 	},
 	{
 		"index": 10,
@@ -124,7 +124,7 @@
 							 "You run for the path. Absolutely no one tries to stop you. After like five minutes of running you need a break and stop near a strange structure."
 		   					],
 		"nextScenario": [11,13,14],
-		"death": false
+		"ending": false
 	},
 	{
 		"index": 11,
@@ -137,7 +137,7 @@
 							 "You run for the path. Absolutely no one tries to stop you. After like five minutes of running you need a break and stop near a strange structure."
 		   					],
 		"nextScenario": [12,13,14],
-		"death": false
+		"ending": false
 	},
 	{
 		"index": 12,
@@ -146,7 +146,7 @@
 		"choices": [],
 		"choiceTransition": [],
 		"nextScenario": [],
-		"death": true
+		"ending": true
 	},
 	{
 		"index": 13,
@@ -155,7 +155,7 @@
 		"choices": [],
 		"choiceTransition": [],
 		"nextScenario": [],
-		"death": true
+		"ending": true
 	},
 	{
 		"index": 14,
@@ -163,11 +163,161 @@
 		"picture": " ",
 		"choices": ["Try the front door","Climb in through a window","Santa Style through the chimney"],
 		"choiceTransition": [
-							 "",
-							 "",
-							 ""
+							 "Feeling bold you waltz right in through the front door hoping nothing terrible will happen.",
+							 "You decide to play it a tad safe, and you find an unlocked window to clamber through.",
+							 "You spot a chimney, and being so full of the holiday spirit you decide to take after your idol and go down it!"
 		   					],
+		"nextScenario": [15,16,26],
+		"ending": false
+	},
+	{
+		"index": 15,
+		"lore": "You find yourself in a living room. You feel safer, knowing that no dead can touch you there. You see three doors, leading to the bathroom, kitchen, and the bedroom.",
+		"picture": " ",
+		"choices": ["Go to the bathroom","Go to the kitchen","Go to the bedroom"],
+		"choiceTransition": [
+							 "You decide to investigate the bathroom. After giving the door a quick knock, you enter.",
+							 "Feeling a bit peckish, you decide to hit the kitchen to see if there are any monster snacks.",
+							 "Feeling adventurous you go to investigate the bedroom."
+		   					],
+		"nextScenario": [16,19,22],
+		"ending": false
+	},
+	{
+		"index": 16,
+		"lore": "You find yourself in the most beautiful bathroom you've ever seen, with a spacious bathtub and a throne fit for a king.",
+		"picture": " ",
+		"choices": ["Return to the living room","Sit in the bathtub","Flush yourself down the toilet"],
+		"choiceTransition": [
+							 "Finding nothing that interests you, you return to the living room.",
+							 "You decide to sit in the bathtub (fully clothed of course).",
+							 "As it is a monster throne, you decide to test its power by flushing yourself."
+		   					],
+		"nextScenario": [15,17,18],
+		"ending": false
+	},
+	{
+		"index": 17,
+		"lore": "After you sit in the tub and turn the water you feel a dizzying sensation and close your eyes. When you open them you find yourself not in a bathroom, but in Tahiti! \"I just played the best bath of my life!,\" you exclaim to yourself. You happily live out the rest of your days farming mangoes in Tahiti.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
 		"nextScenario": [],
-		"death": false
+		"ending": true
+	},
+	{
+		"index": 18,
+		"lore": "It turns out it was indeed powerful enough to flush yourself, and you find yourself in a great sewer based city with your every desire! Years later you produce a movie about your life, but with all characters turned to rats to protect your city and identities.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
+		"nextScenario": [],
+		"ending": true
+	},
+	{
+		"index": 19,
+		"lore": "You see a nicely equipped kitchen. Surprisingly you see the nice clown from the cart at the beginning of your journey standing there.",
+		"picture": " ",
+		"choices": ["Return to the living room","Raid the fridge for snacks","Talk to the clown"],
+		"choiceTransition": [
+							 "No longer hungry and scared of clowns, you flee to the living room.",
+							 "You run to the fridge hoping for a choccy milk for your epic.",
+							 "The clown regales you with tales from his circus."
+		   					],
+		"nextScenario": [15,20,21],
+		"ending": false
+	},
+	{
+		"index": 20,
+		"lore": "The clown snickers as you whip open the door, knowing what comes next. As you open the door tentacles shoot out and pull you in, never to be seen again.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
+		"nextScenario": [],
+		"ending": true
+	},
+	{
+		"index": 21,
+		"lore": "After hearing his stories you decide to join him in the circus life, and you toot horns and juggle together for the rest of your lives.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
+		"nextScenario": [],
+		"ending": true
+	},
+	{
+		"index": 22,
+		"lore": "You see a nice nightstand standing next to the most comfortable bed you have ever seen.",
+		"picture": " ",
+		"choices": ["Return to the living room","Check the nightstand","Take a nap"],
+		"choiceTransition": [
+							 "Wary of falling asleep or stealing for now, you return to the living room.",
+							 "You decide a little theft never hurt anybody and begin rifling through the nightstand.",
+							 "You decide to take a nap, in a strange scary looking house that everyone around avoids."
+		   					],
+		"nextScenario": [15,23,24],
+		"ending": false
+	},
+	{
+		"index": 23,
+		"lore": "Searching through the drawers you find something. The Nuts! Suddenly feeling at peace you leave the house and live out the rest of your days in happiness.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
+		"nextScenario": [],
+		"ending": true
+	},
+	{
+		"index": 24,
+		"lore": "You lay down, falling asleep as soon as your head hits the pillow. You see a vision of an old looking man, God, you realize. \"Salvation is in the nightstand,\" he says.",
+		"picture": " ",
+		"choices": ["Accept his gift","Refuse his gift","Tell him to go away"],
+		"choiceTransition": [
+							 "You graciously accept his gift.",
+							 "You stupidly reject his gift.",
+							 "Annoyed at the interruption, you yell \"Buzz off old man!\""
+		   					],
+		"nextScenario": [23,25,25],
+		"ending": false
+	},
+	{
+		"index": 25,
+		"lore": "Angered by your response, thunderclouds appear around God. \"To hell with you!\" he shouts casting you into, well, Hell.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
+		"nextScenario": [],
+		"ending": true
+	},
+	{
+		"index": 26,
+		"lore": "After squeezing your way through the chimney and tumbling out of the fireplace you see a figure bent under a tree. As he stands up, you recognize him. Its Santa!",
+		"picture": " ",
+		"choices": ["Leave the room","Tell him you're cold","Help him decorate the tree"],
+		"choiceTransition": [
+							 "Fearing what other stories your parents told may be true, you run out the door.",
+							 "Giving Santa your best puppy eyes, you tell him you're cold.",
+							 "Realizing Santa probably has some back pain, you help him out."
+		   					],
+		"nextScenario": [15,27,28],
+		"ending": false
+	},
+	{
+		"index": 27,
+		"lore": "Santa grins at you, and whips out a spare hat from somewhere and plops it on your head. You instantly feel warmer and more jolly. You then decide to become Santa's helper and work for him the rest of your life.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
+		"nextScenario": [],
+		"ending": true
+	},
+	{
+		"index": 28,
+		"lore": "You help Santa decorate the tree. When you finish he lets you have this house's milk and cookies and you leave the house happy to start a new life.",
+		"picture": " ",
+		"choices": [],
+		"choiceTransition": [],
+		"nextScenario": [],
+		"ending": true
 	}
 ]
