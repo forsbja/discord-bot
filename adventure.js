@@ -31,10 +31,10 @@ module.exports = {
             //Handle user taking too long and exit the game
             if(ans == null){
                 await currChannel.send("Oh no! You waited so long to choose you died of old age :) !");
-                console.log("User failed to answer")
+                console.log(message.author.username + " failed to answer")
                 return;
             }
-            console.log("Player answered: " + ans.content);
+            console.log(message.author.username + " answered: " + ans.content);
 
             //Add a transition statement from the last choice to the next scenario
             transPrompt = await currScenario.choiceTransition[ans.content-1] + " ";
@@ -46,6 +46,7 @@ module.exports = {
 
             //Check to see if they chose poorly, exit the game if true
             if(currScenario.ending){
+                console.log(message.author.username + "'s adventure has ended.")
                 currChannel.send(transPrompt + " " + currScenario.lore);
                 currChannel.send("Your adventure has ended.");
                 return;
