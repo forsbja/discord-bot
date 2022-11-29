@@ -28,7 +28,7 @@ client.on("messageCreate", (message) => {
     if(message.content.startsWith("!") && (!message.author.bot)){
       switch (message.content){
         case "!help":
-          message.channel.send("Nuts Help!\nUse ! followed by the number for more information\n1: !help\nTBD\nTBD");
+          message.channel.send("Commands: \n!trivia\n!adventure");
           break;
         case "!ping":
           message.channel.send("pong!");
