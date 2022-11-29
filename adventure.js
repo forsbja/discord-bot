@@ -24,7 +24,7 @@ module.exports = {
         //Loop for as long as the game runs
         while(true){
             //Grab Answer
-            const filter = m => !m.author.bot && m.author == player;
+            const filter = m => !m.author.bot && m.author == player && (m.content == 1 || m.content == 2 || m.content == 3);
             const answer = await currChannel.awaitMessages({filter, max: 1, time: 60000})
             const ans = answer.first();
 
