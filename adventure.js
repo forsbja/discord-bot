@@ -24,17 +24,17 @@ module.exports = {
         //Loop for as long as the game runs
         while(true){
             //Grab Answer
-            const filter = m => !m.author.bot && m.author == player;
+            const filter = m => !m.author.bot && m.author == player && (m.content == 1 || m.content == 2 || m.content == 3);
             const answer = await currChannel.awaitMessages({filter, max: 1, time: 60000})
             const ans = answer.first();
 
             //Handle user taking too long and exit the game
             if(ans == null){
                 await currChannel.send("Oh no! You waited so long to choose you died of old age :) !");
-                console.log("User failed to answer")
+                console.log(message.author.username + " failed to answer")
                 return;
             }
-            console.log("Player answered: " + ans.content);
+            console.log(message.author.username + " answered: " + ans.content);
 
             //Add a transition statement from the last choice to the next scenario
             transPrompt = await currScenario.choiceTransition[ans.content-1] + " ";
@@ -45,8 +45,10 @@ module.exports = {
             choices = await currScenario.choices;
 
             //Check to see if they chose poorly, exit the game if true
-            if(currScenario.death){
+            if(currScenario.ending){
+                console.log(message.author.username + "'s adventure has ended.")
                 currChannel.send(transPrompt + " " + currScenario.lore);
+                currChannel.send("Your adventure has ended.");
                 return;
             }
 
@@ -70,6 +72,6 @@ module.exports = {
  * @returns 
  */
 function formPrompt(lore, choices){
-    let scenarioPrompt = lore + "\n1: "+choices[0]+"\n2: "+choices[1]+"\n3: "+choices[2];
+    let scenarioPrompt = lore + "\n\nDo you..." + "\n1: "+choices[0]+"\n2: "+choices[1]+"\n3: "+choices[2];
     return scenarioPrompt;
 }
