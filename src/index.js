@@ -1,8 +1,9 @@
 const { Client, Events, GatewayIntentBits } = require('discord.js');
-const { token } = require('./config.json');
+const { prefix, token } = require('./config.json');
 const trivia = require("./trivia.js")
 const rps = require('./rps');
 const adventure = require('./adventure');
+const music = require('./music');
 
 
 const client = new Client({
@@ -24,8 +25,9 @@ client.once('ready', () => {
 });
 
 client.on("messageCreate", (message) => {
+    const messArr = message.content.split(' ')
     message.content = message.content.toLowerCase();
-    if(message.content.startsWith("!") && (!message.author.bot)){
+    if(message.content.startsWith(prefix) && (!message.author.bot)){
       switch (message.content){
         case "!help":
           message.channel.send("Commands: \n!trivia\n!adventure");

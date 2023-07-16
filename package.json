@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "eslint"
   },
   "keywords": [],
   "author": "Jake Forsberg",
@@ -13,5 +14,8 @@
   "dependencies": {
     "discord.js": "^14.6.0",
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0"
   }
 }
