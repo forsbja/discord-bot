@@ -6,3 +6,6 @@ config.json
 
 # intellij
 .idea/
+
+# tests
+coverage/
