@@ -1,5 +1,5 @@
 const { Client, Events, GatewayIntentBits } = require('discord.js');
-const { prefix, token } = require('./config.json');
+const { prefix, token } = require('../resources/config.json');
 const trivia = require("./trivia.js")
 const rps = require('./rps');
 const adventure = require('./adventure');

@@ -13,9 +13,9 @@ RUN npm ci
 # Runtime Environment
 FROM node:lts-buster AS runtime
 WORKDIR /app
-COPY src .
+COPY src/ src/
 COPY package*.json .
-COPY --from=build node_modules .
+COPY --from=build /usr/src/app/node_modules/ node_modules
  
 # Expose the port the app runs in
 EXPOSE 443

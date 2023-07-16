@@ -5,7 +5,7 @@ module.exports = {
     startAdventure: async function(message, index) {
         if(message.author.bot){return;} //Ensure a bot didn't trigger this
         //Read in JSON File to a variable
-        let rawData = fs.readFileSync('scenarios.json');
+        let rawData = fs.readFileSync('./resources/scenarios.json');
         let scenarios = JSON.parse(rawData);
 
         //Keep all responses to this in the same file and to the same user
