@@ -9,3 +9,6 @@ config.json
 
 # tests
 coverage/
+
+# build script
+build-image.sh
