@@ -1,6 +1,12 @@
 # Discord Bot
 ## Set Up
-To use this bot clone the repository. Then create a new bot on the discord developer portal. Then create a config.json file with the special token discord gives you under the variable name token.
+To use this bot clone the repository. Then create a new bot on the discord developer portal. Then create a config.json file in the resources directory with the following format:
+```
+{
+  "prefix": "[prefix to trigger the bot]",
+  "token": "[token from discord portal]"
+}
+```
 ### Using Docker
 
 ### Running Normally

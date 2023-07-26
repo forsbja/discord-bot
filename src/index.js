@@ -1,7 +1,6 @@
-const { Client, Events, GatewayIntentBits } = require('discord.js');
+const { Client, Events, GatewayIntentBits, PermissionsBitField } = require('discord.js');
 const { prefix, token } = require('../resources/config.json');
 const trivia = require("./trivia.js")
-const rps = require('./rps');
 const adventure = require('./adventure');
 const music = require('./music');
 
@@ -18,32 +17,33 @@ const client = new Client({
   ]
 })
 
+// Bot Startup
 client.login(token);
-
 client.once('ready', () => {
     console.log('Bot online!');
 });
 
+// Map of music queues with servers
+const queue = new Map();
+
 client.on("messageCreate", (message) => {
     const messArr = message.content.split(' ')
-    message.content = message.content.toLowerCase();
-    if(message.content.startsWith(prefix) && (!message.author.bot)){
-      switch (message.content){
-        case "!help":
+    if(messArr[0].startsWith(prefix) && (!message.author.bot)){
+      switch (messArr[0].toLowerCase()){
+        case `${prefix}help`:
           message.channel.send("Commands: \n!trivia\n!adventure");
           break;
-        case "!ping":
+        case `${prefix}ping`:
           message.channel.send("pong!");
           break;
-        case "!rps":
-          rps();
-          //message.channel.type === ('"dm"') + message.author.send("Are you ready for Rock Paper Scissors? reply with !yes to begin");
-          break;
-        case "!trivia":
+        case `${prefix}trivia`:
           trivia.startGame(message);
           break;
-        case "!adventure":
-          adventure.startAdventure(message, 0);
+        case `${prefix}adventure`:
+          adventure.startAdventure(message);
+          break;
+        case `${prefix}play`:
+          music.play(message, queue.get(message.guild.id), messArr[1])
           break;
         default:
           message.channel.send("Command not recognized");

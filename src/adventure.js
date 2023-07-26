@@ -2,7 +2,7 @@ const fs = require('fs');
 
 module.exports = {
     
-    startAdventure: async function(message, index) {
+    startAdventure: async function(message) {
         if(message.author.bot){return;} //Ensure a bot didn't trigger this
         //Read in JSON File to a variable
         let rawData = fs.readFileSync('./resources/scenarios.json');
@@ -60,10 +60,6 @@ module.exports = {
     }
     
 }
-
-
-
-
 
 /**
  * 
