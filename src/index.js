@@ -1,4 +1,4 @@
-const { Client, Events, GatewayIntentBits, PermissionsBitField } = require('discord.js');
+const { Client, Events, GatewayIntentBits } = require('discord.js');
 const { prefix, token } = require('../resources/config.json');
 const trivia = require("./trivia.js")
 const adventure = require('./adventure');
@@ -43,7 +43,7 @@ client.on("messageCreate", (message) => {
           adventure.startAdventure(message);
           break;
         case `${prefix}play`:
-          music.play(message, queue.get(message.guild.id), messArr[1])
+          music.play(message, queue, messArr[1])
           break;
         default:
           message.channel.send("Command not recognized");
