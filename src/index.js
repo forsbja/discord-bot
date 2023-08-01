@@ -20,6 +20,7 @@ const client = new Client({
 // Bot Startup
 client.login(token);
 client.once('ready', () => {
+    client.user.setActivity('with some nuts', {type: 'PLAYING'})
     console.log('Bot online!');
 });
 
